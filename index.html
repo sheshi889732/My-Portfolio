@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thudum Sheshilia - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    :root {
+      --main-color: #38bdf8;
+      --bg-color: #0f172a;
+      --light-bg: #1e293b;
+      --text-color: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: var(--light-bg);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .main-container {
+      display: flex;
+      margin-top: 80px;
+    }
+
+    .sidebar {
+      width: 300px;
+      background-color: var(--light-bg);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100vh - 80px);
+      position: sticky;
+      top: 80px;
+    }
+
+    .sidebar img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid var(--main-color);
+      object-fit: cover;
+      box-shadow: 0 0 20px var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    .sidebar h2 {
+      color: var(--main-color);
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    main {
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 120px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2, h3 {
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    p, ul, form {
+      max-width: 700px;
+    }
+
+    .icons a {
+      margin: 10px;
+      color: var(--main-color);
+      font-size: 24px;
+    }
+
+    .bar {
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      background-color: var(--main-color);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      border: 2px solid var(--main-color);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    form input, form textarea {
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: var(--light-bg);
+      color: white;
+    }
+
+    form button {
+      background-color: var(--main-color);
+      color: var(--bg-color);
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <img src="images/sheshilia.jpg" alt="Sheshilia">
+      <h2>Thudum Sheshilia</h2>
+    </div>
+
+    <main>
+      <section id="home">
+        <h1>Hello, It's Me</h1>
+        <h2>And I'm a <span id="typed-role"></span></h2>
+        <p>Aspiring Software Engineer | Web Developer | Python Enthusiast</p>
+        <div class="icons">
+          <a href="https://linkedin.com/in/sheshilia-thudum-171b38279" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="mailto:sheshiliathudum33@gmail.com"><i class="ri-mail-fill"></i></a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am Thudum Sheshilia, a passionate and goal-oriented final-year BTech Computer Science Engineering student at St.Peters Engineering College, Hyderabad. I have a strong interest in front-end development and enjoy building user-friendly, responsive web interfaces using HTML, CSS and JavaScript.</p>
+      </section>
+
+      <section id="skills">
+        <h2>My Skills</h2>
+        <p>HTML</p><div class="bar"><div class="fill" style="width:90%"></div></div>
+        <p>CSS</p><div class="bar"><div class="fill" style="width:80%"></div></div>
+        <p>JavaScript</p><div class="bar"><div class="fill" style="width:60%"></div></div>
+        <p>Python</p><div class="bar"><div class="fill" style="width:75%"></div></div>
+        <p>MySQL</p><div class="bar"><div class="fill" style="width:40%"></div></div>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>My Portfolio</h3>
+            <p>Built using HTML, CSS, and JavaScript, showcasing my skills, projects, and passion for accessible, modern web design.</p>
+          </div>
+          <div class="card">
+            <h3>Text to Speech Converter</h3>
+            <p>Built with HTML, CSS, and JavaScript for instant voice output.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const typed = new Typed("#typed-role", {
+      strings: ["Web Developer", "Python Programmer", "Java Programmer"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  </script>
+</body>
+</html>
